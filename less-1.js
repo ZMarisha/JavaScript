@@ -1,4 +1,4 @@
-//Задача 1
+/*//Задача 1
 
 let С = Number(prompt('Введите температуру в градусах Цельсия'));
 let F = 9 / 5;
@@ -37,4 +37,6 @@ let hundreds = numUser / 100;
 let tens = (numUser % 100)/10;
 let units = numUser % 10;
 
-console.log(`В числе ${numUser} количество сотен: ${Math.floor(hundreds)}, десятков: ${Math.floor(tens)}, единиц: ${units}`);
+console.log(`В числе ${numUser} количество сотен: ${Math.floor(hundreds)}, десятков: ${Math.floor(tens)}, единиц: ${units}`);*/
+
+
