@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="card"></div>
+    <!--
+Дополнительное задание.
+
+Дан макет сайта
+https://www.figma.com/file/SbfOi2i4S1pIs0G6uOLPCx/shop-(Copy)?node-id=73%3A140м 
+
+В нем представлены товары, добавленные в корзину 
+
+Вам необходимо создать объект cart  в котором будет 
+1. ссылка на картинку
+2. Название товара (MANGO  PEOPLE  T-SHIRT)
+3. цена (Price: $300 	) 
+4. цвет (Color: Red)
+5. Размер (Size: Xl	)
+6. Количество (Quantity:2)
+
+Отобразить на странице 2 товара добавленных в корзину
+-->
+
+
+
+    <script>
+        "use strict";
+
+        const arrayProduct = [
+     {
+       id: 1,
+       imgSrc: './img/item-3.png',
+       name: 'MANGO  PEOPLE  T-SHIRT',
+       price: 'Price: ',
+       span: '$300',
+       color: 'Color: Red',
+       size: 'Size: Xl',
+       quantity: 'Quantity: ',
+       input: 2,
+       imgClose: './img/close.svg',
+     },
+     {
+       id: 2,
+       imgSrc: './img/item-7.png',
+       name: 'MANGO  PEOPLE  T-SHIRT',
+       price: 'Price: ',
+       span: '$300',
+       color: 'Color: Red',
+       size: 'Size: Xl',
+       quantity: 'Quantity:	',
+       input: 2,
+       imgClose: './img/close.svg',
+     }
+   ];
+
+   const newProduct = document.querySelector('.card');
+
+  
+   function createCard(newCard) {
+
+
+     const product = document.createElement('div');
+     product.classList.add('cardTop', 'cardTop_margin');
+     newProduct.append(product);
+
+     const productImg = document.createElement('img');
+     productImg.src = newCard.imgSrc;
+     productImg.classList.add('cardImage');
+     product.append(productImg);
+
+     const productContent = document.createElement('div');
+     productContent.classList.add('cardText');
+     product.append(productContent);
+
+     const productName = document.createElement('h2');
+     productName.classList.add('productName');
+     productName.textContent = newCard.name;
+     productContent.append(productName);
+
+     const productPrice = document.createElement('p');
+     productPrice.classList.add('cardPrice');
+     productPrice.textContent = newCard.price;
+     productContent.append(productPrice);
+
+     const productSpan = document.createElement('span');
+     productSpan.classList.add('cardCost');
+     productSpan.textContent = newCard.span;
+     productPrice.append(productSpan);
+     
+     const productColor = document.createElement('p');
+     productColor.textContent = newCard.color;
+     productContent.append(productColor);
+     
+     const productSize = document.createElement('p');
+     productSize.textContent = newCard.size;
+     productContent.append(productSize);
+
+     const productQuantity = document.createElement('p');
+     productQuantity.textContent = newCard.quantity;
+     productContent.append(productQuantity);
+
+     const productInput = document.createElement('input');
+     productInput.classList.add('cardInput');
+     productInput.value = newCard.input;
+     productQuantity.append(productInput);
+
+     const productClose = document.createElement('img');
+     productClose.src = newCard.imgClose;
+     productClose.classList.add('cardClose');
+     productContent.append(productClose);
+     
+
+     return product;
+   }
+   
+
+   arrayProduct.forEach(el => {
+    newProduct.append(createCard(el));
+   });
+    </script>
+</body>
+
+</html>

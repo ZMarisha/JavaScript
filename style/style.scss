@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.card {
+  width: 652px;
+  margin-top: 96px;
+  margin-left: 230px;
+  
+}
+
+.cardTop {
+  height: 306px;
+  background: white;
+  display: flex;
+  filter: drop-shadow(8px 8px 21px rgba(0, 0, 0, 0.13));
+}
+
+.cardTop_margin {
+  margin-bottom: 40px;
+}
+
+.cardImage {
+  height: inherit;
+}
+
+.cardText {
+  width: 390px;
+  box-sizing: border-box;
+  padding: 22px 22px 22px 31px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+  position: relative;
+}
+
+.cardText > h2 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  padding-bottom: 42px;
+  font-weight: inherit;
+  width: 262px;
+}
+
+.cardText > p {
+  padding-top: 6px;
+}
+.cardText .cardPrice {
+  padding-top: 0;
+}
+
+.cardCost {
+  color: #f16d7f;
+}
+
+.cardInput {
+  width: 43px;
+  height: 24px;
+  border: 1px solid #eaeaea;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #656565;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.cardClose {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+}
+@media (max-width: 1024px) {
+  .card {
+      width: inherit;
+      margin: 30px;
+    }
+    .cardText {
+      width: 100%;
+    }
+    .cardClose {
+      right: 24px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 667px) {
+  .card {
+      width: inherit;
+      margin: 15px;
+    }
+    .cardTop {
+      height: 188px;
+      width: 100%;
+    }
+    .cardTop_margin {
+      margin-bottom: 32px;
+    }
+    .cardImage {
+      height: inherit;
+    }
+    .cardText {
+      width: 100%;
+      padding: 13px 12px 12px 17px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .cardText > h2 {
+      font-size: 16px;
+      line-height: 19px;
+      padding-bottom: 26px;
+      width: 143px;
+    }
+    .cardText > p {
+      padding-top: 4px;
+    }
+    .cardInput {
+      width: 24px;
+      height: 15px;
+      font-size: 10px;
+      line-height: 12px;
+      margin-left: 15px;
+    }
+    .cardClose {
+      top: 17px;
+      right: 12px;
+      width: 10px;
+      height: 11px;
+    }
+  }  
